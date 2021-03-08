@@ -9,10 +9,10 @@ import Foundation
 
 open class MarkdownLink: MarkdownLinkElement {
   
-  fileprivate static let regex = "\\[[^\\]]+\\]\\(\\S+(?=\\))\\)"
-  
+  fileprivate static let regex = "\\[(.*?)\\]\\((.*?)\\)"
+
   // This regex is eager if does not count even trailing Parentheses.
-  fileprivate static let onlyLinkRegex = "\\(\\S+(?=\\))\\)"
+  fileprivate static let onlyLinkRegex = "\\((.*?)\\)"
   
   open var font: MarkdownFont?
   open var color: MarkdownColor?
